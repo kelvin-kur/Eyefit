@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans&family=Oswald&display=swap');
+
+/* General template */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Site header */
+.app-header__logo {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Leckerli One', cursive;
+  font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  width: 10rem;
+}
+
+.app-header {
+  box-shadow: 0 0 5rem 0 rgba(0, 0, 0, .1);
+}
+
+/* Site content */
+.app-content {
+  margin: 10rem 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(192, 192, 192, 0.3);
+}
+
+.app-content__intro {
+  margin: 10rem 8rem;
+}
+
+.app-content__title {
+  z-index: 0;
+  position: relative;
+  color: rgb(15, 44, 102);
+  font-family: 'Oswold', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.app-content__title::before {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  top: -1rem;
+  left: -2rem;
+  width: 10rem;
+  height: 3.5rem;
+  background-color: rgba(15, 70, 102, 0.2);
+}
+
+.app-content__intro-para {
+  width: 45ch;
+  margin: 2rem 0;
+  color: rgb(57, 60, 62);
+  font-size: 1.125rem;
+}
+
+.app-content__scan-cta {
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: rgb(15, 44, 102);
+  border-radius: .4rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.125rem;
+  box-shadow: .5rem .5rem 0 0 rgba(15, 44, 102, 0.4);
+  transition: .6s ease-out;
+}
+
+.app-content__scan-cta:hover {
+  box-shadow: .5rem .5rem 1.5rem 0 rgba(15, 44, 102, 0.4);
+}
+
+.app-content__hero {
+  margin-top: 2rem;
+}
+
+.app-content__hero-image-wrapper {
+  overflow: hidden;
+}
+
+.app-content__hero-image {
+  width: 36rem;
+  height: 47rem;
+  background-image: url('./components/public/hero.webp');
+  background-position: 90% 30%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-attachment: fixed;
+}
+
+/* Footer */
+.app-footer {
+  padding: 1.5rem 0;
+  background-color: rgb(15, 44, 102);
+  color: white;
+  font-family: 'Oswold', sans-serif;
+}
+
+.app-footer__credit {
+  margin-left: 2rem;
+}
+
+.app-footer__credit-header {
+  letter-spacing: .1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.app-credit {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin-top: 1rem;
+  list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+.app-credit__member {
+  margin-left: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-footer__information {
+  margin-top: 1rem;
+  text-align: center;
 }
