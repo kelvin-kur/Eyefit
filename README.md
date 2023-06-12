@@ -1,2 +1,0 @@
-# Eyefit
-Bangkit Capstone Product
